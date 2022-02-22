@@ -1,0 +1,378 @@
+body{
+    font-family: 'LomoCopyRegular';
+    color: #000000a9;
+    background-color: rgb(255, 255, 255);
+} 
+
+
+section{
+    
+    max-width: 1200px;
+    min-width: 850px;
+    min-height: 140px;
+    margin: auto;
+    /* min-width: 600px; */
+
+    background-color: rgb(201, 56, 56);
+    filter: drop-shadow(10px 10px 5px #3a0f0f77);
+
+    border-radius: 10px;
+    border: 10px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Search Search Selector Selector"
+      "Pokemon Pokemon Pokemon Pokemon"; 
+
+}
+
+#pokemon{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    /* grid-template-rows: 1fr ;  */
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Details Details Info Info"
+      "Details Details Type Type"; 
+    grid-area: Pokemon;
+
+    
+}
+
+#autoComplete{
+    width:100%;
+    display: block;
+    margin: auto;
+    text-align:center;
+    font-family: 'LomoCopyRegular';
+
+}
+
+#titleImage {
+    display: block;
+    width: 600px;
+    margin: 25px auto;
+    filter: drop-shadow(10px 10px 4px #3a0f0f49);
+}
+
+
+
+.search{
+    width: 300px;
+    margin: 50px auto 0px;
+    grid-area: Search;
+}
+
+p, h1, h2{ 
+    margin: auto;
+    text-transform: capitalize;
+    text-align:center;
+}
+
+.pokemonType0{
+    width:50%;
+    height: 50px;
+    margin: 10px auto 50px;
+    padding: 5px;
+    background-color: rgb(50, 148, 63);
+    text-transform: capitalize;
+    text-align:center;
+    
+    border-style: inset;
+    border-radius: 5px;
+    border-color: rgb(50, 148, 63);
+    
+
+    grid-area: Type;
+}
+
+.pokemonDetails{ 
+    padding: 2rem;
+    width:300px;
+    height:300px;
+    margin: 50px auto;
+    background-color: rgb(223, 236, 225);
+
+    border-radius: 10px;
+    border: 20px;
+    border-style: ridge;
+    border-color: rgb(226, 226, 226);
+
+    grid-area: Details;
+}
+
+.pokemonInfo{
+    margin: 50px;
+    text-transform: capitalize;
+    text-align:center;
+
+    grid-area: Info;
+
+    
+}
+
+.allInfo{
+    grid-area: Info;
+}
+
+.statGrid{
+    display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."; 
+}
+
+.statDiv, .sizeDiv{
+    margin: 2px;
+    padding: 5px;
+    background-color: rgb(61, 200, 255);
+
+    border-radius: 5px;
+
+    border-style: outset;
+    border-radius: 5px;
+    border-color: rgb(61, 200, 255)
+    
+}
+
+.statDiv:hover, .sizeDiv:hover{
+    margin: 2px;
+    padding: 5px;
+    background-color: rgb(111, 212, 252);
+    /* font-size: 50px; */
+}
+
+.stateValue:hover {
+    /* font-size: 100px; */
+}
+
+.sizeGrid{
+display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."
+    ". . ."; 
+    
+}
+
+.imageSelection{
+    grid-area: Selector;
+    margin: 25px auto;
+    padding: 10px;
+    background-color: rgb(50, 148, 63);
+    font-family: 'LomoCopyRegular';
+}
+
+.imageSelection Select{
+  padding-right: 20px;
+    height: 50px;
+    width: 200px;
+    grid-area: Selector;
+    text-align: center;
+    background-color: rgb(50, 148, 63);
+    border-style: none;
+    font-family: 'LomoCopyRegular';
+    font-size: 20px;
+}
+
+.imageType option{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+#imageType:hover{
+    background-color: rgb(71, 170, 84);
+}
+
+#imageTypeLabel{
+    font-family: 'LomoCopyRegular';
+}
+
+
+
+.spriteImage{
+    display: block;
+    width: 250px;
+    margin: auto;
+    filter: drop-shadow(10px 10px 4px #3a0f0f75);
+}
+.pokemonName{
+    filter: drop-shadow(3px 3px 1px #3a0f0f75);
+}
+
+.allInfo{
+
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------------------- */
+/* Background pokeballs inspired by: https://codepen.io/incrediblecast/pen/yLBmVXQ*/
+/* ----------------------------------- */
+.backgroundBall{
+    width: 50px;
+    /* filter: drop-shadow(5px 5px 1px #3a0f0f42); */
+
+}
+
+/* Pokeball 1-------------------------------- */
+.ball1 div:nth-child(1) {
+    display: block;
+    position: absolute;
+    left:25%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-5s;
+}
+.ball1 div:nth-child(2) {
+    display: block;
+    position: absolute;
+    left:65%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-10s;
+}
+.ball1 div:nth-child(3) {
+    display: block;
+    position: absolute;
+    left:75%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-2s;
+}
+/* Pokeball 2-------------------------------- */
+.ball2 div:nth-child(1) {
+    display: block;
+    position: absolute;
+    left:5%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-8s;
+}
+.ball2 div:nth-child(2) {
+    display: block;
+    position: absolute;
+    left:35%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-17s;
+}
+.ball2 div:nth-child(3) {
+    display: block;
+    position: absolute;
+    left:85%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-12s;
+}
+/* Pokeball 3-------------------------------- */
+.ball3 div:nth-child(1) {
+    display: block;
+    position: absolute;
+    left:10%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-1s;
+}
+.ball3 div:nth-child(2) {
+    display: block;
+    position: absolute;
+    left:55%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-15s;
+}
+.ball3 div:nth-child(3) {
+    display: block;
+    position: absolute;
+    left:95%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-5s;
+}
+/* Pokeball 4-------------------------------- */
+.ball4 div:nth-child(1) {
+    display: block;
+    position: absolute;
+    left:30%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-57s;
+}
+.ball4 div:nth-child(2) {
+    display: block;
+    position: absolute;
+    left:50%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-62s;
+}
+.ball4 div:nth-child(3) {
+    display: block;
+    position: absolute;
+    left:80%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-26s;
+}
+/* Pokeball 5-------------------------------- */
+.ball5 div:nth-child(1) {
+    display: block;
+    position: absolute;
+    left:20%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-45s;
+}
+.ball5 div:nth-child(2) {
+    display: block;
+    position: absolute;
+    left:40%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-110s;
+}
+.ball5 div:nth-child(3) {
+    display: block;
+    position: absolute;
+    left:90%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-21s;
+}
+
+
+/* Pokeball Keyframs-------------------------------- */
+@keyframes fall{
+    0%{
+        
+        opacity:0;
+        top:-10%;
+        transform:translateX (20px) rotate(0deg);
+    }
+    20%{
+        opacity:1;
+        transform:translateX (-20px) rotate(45deg);
+    }
+    40%{
+        rotate: 1turn;
+ 
+        transform:translateX (-20px) rotate(90deg);
+    }
+    60%{
+        
+       transform:translateX (-20px) rotate(135deg); 
+    }
+    80%{
+        opacity:1;
+        transform:translateX (-20px) rotate(180deg);
+    }
+    100%{
+        rotate: 2turn;
+        opacity:0;
+        top:110%;
+        transform:translateX (-20px) rotate(225deg);
+    }
+    }

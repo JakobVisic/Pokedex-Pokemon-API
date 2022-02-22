@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon</title>
+    
+    <!--- Gelica via Monotype.com -->
+    <link href="https://cdn.fonts.net/kit/148608b0-8b47-11ec-9ce3-0220834439f4/148608b0-8b47-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
+
+    <!-- Poppins via GOogle Fonts. --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+
+    <!-- Monotype Fonts. --->
+    <link href="https://cdn.fonts.net/kit/c915bb20-9364-11ec-9ce3-0220834439f4/c915bb20-9364-11ec-9ce3-0220834439f4.css" rel="stylesheet" />
+
+    <!-- Development version of VueJS -->
+    <script src="https://unpkg.com/vue@next"></script> 
+    <!-- CSS for the autocomplete JS library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.01.min.css">
+ <script src="https://unpkg.com/vue@next"></script> 
+    <!-- axios for making Http requests  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+      <!-- <div class="background"> -->
+      <div class="ball1">
+        <div><img class="backgroundBall" id="pokeball1" src="images/pb1.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball1" src="images/pb1.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball1" src="images/pb1.png" alt=""></div>
+      </div>
+      <div class="ball2">
+        <div><img class="backgroundBall" id="pokeball2" src="images/pb2.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball2" src="images/pb2.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball2" src="images/pb2.png" alt=""></div>
+      </div>
+      <div class="ball3">
+        <div><img class="backgroundBall" id="pokeball3" src="images/pb3.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball3" src="images/pb3.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball3" src="images/pb3.png" alt=""></div>
+      </div>
+      <div class="ball4">
+        <div><img class="backgroundBall" id="pokeball4" src="images/pb4.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball4" src="images/pb4.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball4" src="images/pb4.png" alt=""></div>
+      </div>
+      <div class="ball5">
+        <div><img class="backgroundBall" id="pokeball5" src="images/pb5.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball5" src="images/pb5.png" alt=""></div>
+        <div><img class="backgroundBall" id="pokeball5" src="images/pb5.png" alt=""></div>
+      </div>
+     
+      
+
+      <div class="title">
+        <img id="titleImage" src="images/pokedex_logo.png" alt="Pokedex">
+      </div>
+      
+      <section>
+      <!--  this input element is targeted by the autocompleteJS library --->
+      <div class="search" >
+        <input id="autoComplete">
+      </div>
+      
+      <div class="imageSelection">
+        <label id="imageTypeLabel" for="imageType">Select Image Type</label> <br>
+        <select name="imageType" class="imageType" id="imageType" onchange='switchImage()'>
+          <option value="pixel">Pixel</option>
+          <option value="dream_world">Dream World</option>
+          <option value="home">Home</option>
+          <!-- <option value="official-artwork">Artwork</option> -->
+        </select>
+      </div>
+
+      <main id="pokemon">
+        <!-- javascript will populate this  -->
+
+      </main>
+
+      
+
+      <!-- The autocomplete JS library helps to build search UI -->
+      <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
+ 
+      <!-- javascript to fetch and display data everything. -->
+	    <script src="script.js"></script>
+
+    </section>
+  </body>
+</html>
